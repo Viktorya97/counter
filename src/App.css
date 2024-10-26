@@ -2,37 +2,67 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.counter {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 40px 24px;
+}
+
+.counter__buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.counter__button {
+  box-sizing: border-box;
+  width: fit-content;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 15px;
+  background-color: #1cfc03;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 200ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter__button.decrement {
+  background-color: #da1c1c;
+}
+
+.counter__button.increment {
+  background-color: #1902c5;
+}
+
+.counter__button.randomize {
+  background-color: unset;
+  background-image: linear-gradient(to right, #5C258D 0%, #4389A2  51%, #5C258D  100%);
+}
+
+.counter__button:hover,
+.counter__button:focus {
+  outline: 0;
+  background-color: #1cfc03;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.counter__button.decrement:hover,
+.counter__button.decrement:focus {
+  background-color: #da1c1c;
+}
+
+.counter__button.increment:hover,
+.counter__button.increment:focus {
+  background-color: #1902c5;
+}
+
+.counter__button.randomize:hover,
+.counter__button.randomize:focus {
+  background-color: unset;
+  background-position: right center;
 }
